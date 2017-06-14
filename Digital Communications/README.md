@@ -1,1 +1,1 @@
-FCS (Frame check sequence) java implementation
+CRC (Cyclic Redundancy Check) java implementation
