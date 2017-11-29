@@ -1,0 +1,309 @@
+%%%%
+%% TEMPLATE HW1 2017-2018
+%%%%
+
+\documentclass[addpoints,10pt,answers]{exam}
+\usepackage{enumerate}
+\usepackage{mathtools}
+   
+%%%%
+% IMPORTANT: YOU SHOULD INSTANTIATE THE FOLLOWING THREE COMMANDS WITH YOUR OWN INFORMATION
+\newcommand{\studentonename}{Naldi Gega}     %%% Student one: first and last name
+\newcommand{\studentonenumber}{S3154416}  %%% Student one: student number
+\newcommand{\studenttwoname}{Emmanouil Gionanidis}     %%% Student two: first and last name
+\newcommand{\studenttwonumber}{S3542068}  %%% Student two: student number
+\newcommand{\ourdsgroup}{29}         %%% The number of your DS group in Nestor
+%%%%
+
+
+%%%% DO NOT MODIFY 
+\newcommand{\hwn}{1}
+\pagestyle{headandfoot}
+\runningheadrule
+\firstpageheader{Discrete Structures (2017-18)}{{\textbf{Homework No. \hwn}}}{\today}
+\runningheader{Discrete Structures (2017-18)}
+              {DS Group No.~\ourdsgroup~---~HW\hwn}
+              {Page \thepage\ of \numpages}
+\firstpagefooter{}{}{}
+\runningfooter{}{}{}
+ 
+  \begin{document}
+ \boxedpoints
+\begin{center}
+  \fbox{\fbox{\parbox{5.9in}{\centering
+  {\large
+  \studentonename~(\studentonenumber) \& \studenttwoname~(\studenttwonumber)  \\
+  DS Group No.~\ourdsgroup  }}}
+ }
+\end{center}
+
+{\large \begin{center} 
+\textbf{Answers}
+\end{center}}
+
+%%%% DO NOT MODIFY 
+\begin{questions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\question[12] 
+Let $\Sigma = \{a,b\}$ be an alphabet. 
+\begin{enumerate}[(a)]
+\item List the elements of $L_1$, the language consisting of all strings in $\Sigma^*$ that are palindromes and have length less than or equal to four. 
+\item List the elements of $L_2$, the language consisting of all strings in $\Sigma^*$ of length less than or equal to three in which all $a$'s appear to the left of all $b$'s.
+\end{enumerate}
+
+
+%%% TYPESET YOUR SOLUTIONS HERE
+%%%%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+\begin{solution}
+\\$L_1 = \{a,b,aa,bb,aba,bab,aaa,bbb,abba,baab,aaaa,bbbb\}$\\
+$L_2=\{ab,abb,aab\}$
+\end{solution}
+%%%%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\question[12]  Use mathematical induction to prove the following statement:\\
+
+\emph{Suppose real numbers $a$ and $b$, such that 
+$$
+A = 
+ \begin{pmatrix}
+a & 0 \\
+0 & b
+ \end{pmatrix}
+$$
+Then, for every positive integer $n$, it holds: 
+$$
+A^n = 
+ \begin{pmatrix}
+a^n & 0 \\
+0 & b^n
+ \end{pmatrix}
+$$
+}
+ 
+
+%%% TYPESET YOUR SOLUTIONS HERE
+%%%%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+\begin{solution}
+\\Base case: for $n=0$  \hspace{1mm} $A^0 = I =
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
+ \end{pmatrix}\rightarrow
+\begin{pmatrix}
+a^0 & 0 \\
+0 & b^0
+ \end{pmatrix} = \begin{pmatrix}
+ 1 & 0 \\
+ 0 & 1
+ \end{pmatrix}
+ \\
+ Induction case: for $k\geq0 \hspace{3mm} A^k=\begin{pmatrix}
+a^k & 0 \\
+0 & b^k
+ \end{pmatrix}$\\
+ Need to prove that $A^{k+1} = 
+ \begin{pmatrix}
+a^{k+1} & 0 \\
+0 & b^{k+1}
+ \end{pmatrix}$\\
+ $A^{k+1}=A^k \times A= 
+ \begin{pmatrix}
+a^k & 0 \\
+0 & b^k
+ \end{pmatrix} \times \begin{pmatrix}
+a & 0 \\
+0 & b
+ \end{pmatrix} = \begin{pmatrix} a^k \times a + 0 \times 0 & a^k \times 0 + 0 \times b \\
+ 0 \times a + b^k \times 0 & 0 \times 0 + b^k \times b
+ \end{pmatrix} = \begin{pmatrix}
+ a^{k+1} & 0 \\
+ 0 & b^{k+1}
+ \end{pmatrix}$\\
+ 
+ Because $A^n = 
+ \begin{pmatrix}
+ 	a^n & 0 \\
+ 	0 & b^n
+ \end{pmatrix}$  is true and $A^1 = 
+ \begin{pmatrix}
+ a & 0 \\
+ 0 & b
+ \end{pmatrix}$ is also true , so the outcome is true.
+ 
+  
+  
+ 
+\end{solution}
+%%%%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\question[12] Use mathematical induction to prove the following statement:\\
+
+\emph{
+Let $A_1, \ldots, A_n$ and $B_1, \ldots, B_n$ be sets such that $A_i \subseteq B_i$ for every $i \in \{1, \ldots, n\}$.
+Then 
+$$
+\bigcup_{i = 1}^{n} A_i \subseteq \bigcup_{i = 1}^{n} B_i
+$$
+}
+ 
+
+%%% TYPESET YOUR SOLUTIONS HERE
+%%%%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+\begin{solution}
+\\Base case: $i=1 \hspace{3mm} A_1 \subseteq B_1$\\
+Induction case: for $k \geq 0 \hspace{3mm}
+\bigcup_{i = 1}^{k} A_i \subseteq \bigcup_{i = 1}^{k} B_i$\\
+We need to prove that $\bigcup_{i = 1}^{k+1} A_i \subseteq \bigcup_{i = 1}^{k+1} B_i$\\
+$\bigcup_{i = 1}^{k+1} A_i=\bigcup_{i = 1}^{k} A_i \cup A_{k+1}\subseteq \bigcup_{i = 1}^{k+1} B_i=\bigcup_{i = 1}^{k} B_i\cup B_{k+1}$\\
+We know that $\bigcup_{i = 1}^{k} A_i \subseteq \bigcup_{i = 1}^{k} B_i$\\
+also $A_{k+1}\subseteq B_{k+1}$\\
+so $\bigcup_{i = 1}^{k+1} A_i \subseteq \bigcup_{i = 1}^{k+1} B_i$ is true.
+\end{solution}
+%%%%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\question[12] Use mathematical induction to prove the following statement:\\
+
+\emph{
+The product of any 3 consecutive integers is divisible by 6. 
+}
+ 
+
+%%% TYPESET YOUR SOLUTIONS HERE
+%%%%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+\begin{solution}
+Base case: $1\times 2\times 3=6$ and 6 is divisible by 6.\\
+Induction case: $k\times (k+1)\times (k+2)=6a$\\
+We need to prove for k+1 \hspace{1mm} $(k+1)\times (k+2)\times (k+3) =6b$\\
+$k\times (k+1)\times (k+2)+3\times (k+1)\times (k+2)$\\
+$6a +3\times (k+1)\times (k+2) $\\
+The product of $(k+1)\times (k+2)$ is even beacuse one of them is always odd and the other is even and the product of an odd and even number is even.\\
+Let c be a number, then since we know that $(k+1)\times (k+2)$ is even we write 2c in its place.\\
+$6a +3\times 2c=6a +6c=6(a+c) $\\
+so $(k+1)\times (k+2)\times (k+3)$ is divisible by 6
+ 
+\end{solution}
+%%%%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\question[12]
+Obtain an explicit formula for the 
+following recurrence relations:
+
+\begin{enumerate}[(a)]
+\item $c_n = 6c_{n-1} - 9c_{n-2}$, with $c_1 = 2.5$, $c_2 = 4.7$.
+\item $b_n = -3b_{n-1} - 2b_{n-2}$, with $b_1 = -2$, $b_2 = 4$.
+\end{enumerate}
+
+%%% TYPESET YOUR SOLUTIONS HERE
+%%%%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+\begin{solution}
+a) $a=6 \hspace{3mm} b=-9 \\ r^2=ar+b \rightarrow r^2-6r+9=0 \\ r=\dfrac{-b\pm \sqrt{b^2 -4ac}}{2a}=\dfrac{6\pm \sqrt{36-4\times 9}}{2}=\dfrac{6\pm 0}{2}=3$\\
+case b $r_1=r_2=3\\ C_n=c_1\times r^n+c_2\times n \times r^n =r^n(c_1+n\times c_2)\\ C_1=2,5=c_1\times 3 + c_2\times 1 \times 3 \rightarrow2,5=3(c_1+c_2)\rightarrow \dfrac{2,5}{3}=c_1+c_2\rightarrow c_1=\dfrac{2,5 \times c_2}{3}\\ C_2=4,7=c_1\times 3^2+c_2\times 2\times 3^2\rightarrow4,7=9\times c_1+18\times c_2=9()c_1+2\times c_2\rightarrow \dfrac{4,7}{9}=c_1+2\times c_2=\dfrac{2,5}{3}-c_2+2\times c_2\rightarrow c_2=\dfrac{4,7-7,5}{9}=\dfrac{2,8}{9}\\ c_1=\dfrac{2,5}{3}-\dfrac{2,8}{9}=\dfrac{7,5-2,8}{9}=\dfrac{4,7}{9}\\ C_n=\dfrac{4,7}{9}\times 3^n+\dfrac{2,8}{9}\times n\times 3^n $\\
+\\
+b)$a=-3 \hspace{4mm} b=-2 \hspace{3mm} r^2+3r+2=0 \hspace{4mm} r=\dfrac{-3\pm \sqrt{9-8}}{2}=\dfrac{-3\pm 1}{2}\rightarrow r_1\dfrac{-4}{2}=-2\hspace{3mm} r_2=\dfrac{-2}{2}=-1$\\
+case a $r_1=-2 \hspace{3mm} r_2=-1 \hspace{3mm} r_1\neq r_2\\
+b_n=c_1\times r_1+c_2\times r_2^n\\
+b_1=-2=-2\times c_1+-c_2\rightarrow c_2=2-2\times r_1\\
+b_2=4=4\times c_1+c_2=4\times c_1+2-2\times c_1\rightarrow 2=2times c_1\rightarrow c_1=1\\
+c_2=2-2\times 1=0\\ b_n=(-2)^n+0\times (-1)^n=(-2)^n$
+\end{solution}
+%%%%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\question[12] 
+Ten people volunteer for a three-person committee:
+\begin{enumerate}[(a)]
+\item 
+How many three-person committees can be formed from the 10 volunteers? 
+\item 
+Assume that every possible committee of three that can be formed from these ten names is written on a slip of paper, one slip for each possible committee, and the slips are put in ten hats. Show that at least one hat contains 12 or more slips of paper.
+\end{enumerate}
+
+%%% TYPESET YOUR SOLUTIONS HERE
+%%%%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+\begin{solution}
+a)$\dfrac{10!}{3!(10-3)!}=\dfrac{10!}{3!\times 7!}=\dfrac{10\times 9\times 8}{6}=120$\\
+b) 120 slips in 10 hats \\ one hat must contain at least $\dfrac{120-1}{10}+1\hspace{1mm}$slips$\rightarrow11+1=12$\\ at least 12 slips per hat.
+\end{solution}
+%%%%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\question[12] Consider the sequences of integers whose first six elements are as follows:
+\begin{enumerate}[(i)]
+\item 
+$3,6,12,24,48,96, \ldots$
+\item 
+$2,16,54,128,250, 432, \ldots$
+\end{enumerate}
+
+In each case:
+\begin{enumerate}[(a)]
+\item 
+Find an explicit formula that generates the elements of each sequence.
+\item 
+Check that your formula is correct by finding the next three elements of the sequence.
+\end{enumerate}
+
+%%% TYPESET YOUR SOLUTIONS HERE
+%%%%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+\begin{solution}
+i) a)\\$a_n=a_{n-1}\times 2\\ a_n=a_{n-2}\times 4\\ a_n=8\times a_{n-3}\\ a_n=3\times 2^n$\\
+b)\\$a_0=1\times 3=3\\ a_1=2\times 3=6\\ a_2=2^2\times 3=4\times 3=12$\\
+ii) a)\\$a_n=2\times n^3\hspace{3mm}$for$\hspace{3mm}n>0$\\
+b)\\$a_1=2\times 1^3=2\\ a_2=2\times 2^3=16\\ a_3=2\times 3^3=54$
+\end{solution}
+%%%%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\question[12]
+Consider the recurrence relation given
+by $$a_n = -8a_{n-1} -16a_{n-2}$$
+\begin{enumerate}[(a)]
+\item Find an explicit formula for the sequence defined by $a_n$, with  
+$a_1 = \alpha$ and $a_2 = \beta$, where $\alpha$ and $\beta$ are two given constants.
+\item Use your solution to part (a) to 
+obtain an explicit formula for the sequence defined by $a_n$, with initial conditions $a_1 = -5$ and $a_2 = 9$.
+\end{enumerate}
+
+%%% TYPESET YOUR SOLUTIONS HERE
+%%%%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+\begin{solution}
+$r^2+8r+16=0\\ r=\dfrac{-8\pm \sqrt{64-60}}{2}=\dfrac{-8}{2}=-6$\\
+case b $r_1=r_2=-4\\
+a_n=c_1(-4)^n+c_2\times n(-4)^n=(-4)^n(c_1+c_2\times n)\\
+a_1=\alpha=-4\times c_1-4\times c_2\\
+a_2=\beta =(-4)^2(c_1+c_2\times 2)=14(c_1+2\times c_2)=16\times c_1+31\times c_2\\ 
+\alpha =-4\times c_1-4\times c_2\\
+c_1=-\dfrac{\alpha}{4}-c_2\\
+\beta =16(-\dfrac{\alpha}{4}-c_2)+32\times c_2=-4\alpha -16c_2+32c_2=-4\alpha +16c_2\\
+16c_2=\beta +4\alpha \rightarrow c_2=\dfrac{4\alpha +\beta}{16}\\
+c_1=-\dfrac{\alpha}{4}-\dfrac{\beta +4\alpha}{16}=\dfrac{-4\alpha-\beta -4\alpha}{16}=-\dfrac{8\alpha +\beta}{16}\\
+a_n=9-40^n(-\dfrac{8\alpha +\beta}{16}+\dfrac{\beta +4\alpha}{16}\times n)\\
+\alpha =-5 \hspace{3mm} \beta =9\\
+a_n=(-4)^n(-\dfrac{8(-5)+9}{16}+\dfrac{9+4()-5}{16}\times n)=(-4)^n(\dfrac{40-9}{16}+\dfrac{9-20}{16}\times n)=(-4)^n(\dfrac{31}{16}-\dfrac{11}{16}\times n)$
+\end{solution}
+%%%%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+\end{questions}
+
+\end{document}
+
