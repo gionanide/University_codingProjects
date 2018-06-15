@@ -1,44 +1,54 @@
-Nov	#Homeland	A
-Oct	#Homeland	A
-Jan	#Homeland	A
-Aug	#starwars	A
-Mar	#GOT	A
-May	#starwars	A
-Apr	#starwars	A
-Jun	#GOT	A
-May	#GOT	A
-Sep	#WestWorld	A
-Feb	#starwars	A
-Nov	#GOT	A
-May	#WestWorld	A
-Feb	#GOT	A
-Mar	#Homeland	A
-Sep	#starwars	A
-Jan	#WestWorld	A
-Oct	#GOT	A
-Mar	#WestWorld	A
-Aug	#GOT	A
-Nov	#starwars	A
-Mar	#starwars	A
-Feb	#Homeland	A
-Apr	#GOT	A
-Jan	#starwars	A
-Jul	#GOT	A
-Apr	#Homeland	A
-Feb	#WestWorld	A
-Nov	#WestWorld	A
-Jan	#GOT	A
-Jun	#Homeland	A
-Jul	#WestWorld	A
-May	#Homeland	A
-Aug	#WestWorld	A
-Aug	#Homeland	A
-Apr	#WestWorld	A
-Sep	#Homeland	A
-Sep	#GOT	A
-Jun	#WestWorld	B
-Jun	#starwars	A
-Oct	#WestWorld	A
-Jul	#Homeland	A
-Jul	#starwars	A
-Oct	#starwars	A
+Hot_Talking	DEF XYZ CNO DEF
+PostModern_Talking	XYZ CNO DEF
+Dumb_News	CNO BAT
+Loud_Sports	CNO
+Hot_Show	ABC XYZ
+Loud_Show	ABC
+Hourly_Sports	DEF DEF
+Cold_Show	XYZ DEF
+Surreal_Games	XYZ
+Cold_News	ABC
+Surreal_Talking	DEF BAT CNO
+Cold_Sports	BAT ABC
+Cold_Talking	CNO DEF BAT CNO
+Loud_Talking	DEF XYZ CNO
+Surreal_Cooking	CNO
+Loud_Cooking	XYZ DEF
+PostModern_Sports	BAT
+Dumb_Games	BAT
+PostModern_Games	ABC XYZ
+Hot_Sports	CNO BAT
+Surreal_Sports	BAT ABC
+Hourly_Games	CNO BAT
+Baked_Games	ABC XYZ
+Baked_Sports	BAT
+Surreal_Show	XYZ DEF
+PostModern_News	BAT ABC
+Almost_News	BAT ABC
+Dumb_Cooking	XYZ
+Dumb_Sports	DEF CNO
+Loud_Games	BAT ABC
+Baked_Cooking	DEF CNO
+PostModern_Cooking	DEF CNO
+Almost_Sports	CNO BAT
+Surreal_News	ABC XYZ
+Almost_Cooking	DEF
+Loud_News	CNO BAT
+Hourly_Talking	XYZ ABC DEF
+Baked_Talking	CNO DEF BAT
+PostModern_Show	XYZ
+Almost_Talking	XYZ CNO DEF
+Hourly_Show	BAT ABC
+Almost_Games	ABC
+Hourly_News	CNO
+Cold_Cooking	CNO
+Hot_News	BAT
+Hourly_Cooking	ABC XYZ
+Almost_Show	ABC XYZ
+Baked_News	BAT ABC
+Hot_Games	ABC
+Dumb_Show	BAT ABC
+Dumb_Talking	ABC DEF XYZ
+Hot_Cooking	DEF
+Cold_Games	XYZ
+Baked_Show	XYZ
