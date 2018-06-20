@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>SelectStore.qml</file>
+        <file>NewStore.qml</file>
+        <file>EditItem.qml</file>
+        <file>OnWork.qml</file>
+        <file>EditTable.qml</file>
+    </qresource>
+</RCC>
