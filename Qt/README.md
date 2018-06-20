@@ -1,1 +1,1 @@
-
+Qt mobile application, PDA
