@@ -4,4 +4,4 @@ Assignments made for the Postgraduate course
 
 Department of Informatics  
 
-Aristotle University of Thessaloniki.
+Aristotle University of Thessaloniki (AUTh).
