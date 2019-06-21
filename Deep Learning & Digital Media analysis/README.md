@@ -15,6 +15,6 @@ Aristotle University of Thessaloniki (AUTh).
 
 ## Model2 intermedia stages plots
 
-### First concolution layer
+###### First concolution layer
 
 ![alt text](https://github.com/gionanide/University_codingProjects/blob/master/Deep%20Learning%20%26%20Digital%20Media%20analysis/conv_begin.png)
